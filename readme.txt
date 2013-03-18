@@ -28,6 +28,7 @@ If the automatic process above fails, follow these simple steps to do a manual i
 
 == Screenshots ==
 
+
 1. **Amplify Dashboard** - See the users activity in your publications. Sign ups, pageviews, social sharing, comments.
 2. **Manage All you sites** - Have your network single sign on, and get permission only for your own social apps.
 3. **Sign Up Dashboard** - Gamify you viewers experience. They can have their own social network on your publication.
