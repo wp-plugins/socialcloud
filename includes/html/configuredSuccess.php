@@ -12,7 +12,7 @@ if (isset($_POST['savechanges'])) {
         update_option("_PERSONA_ONBOARDING", $personaonboarding);
         update_option("_PERSONA_FOOTERBAR", $personafooterbar);
         update_option("_PERSONA_COMMENT_APPROVE", $personacommentstatus);
-        update_option("persona_rating_post_position",$personaratingposition );
+        update_option("persona_rating_post_position", $personaratingposition);
         update_option("persona_like_post_position", $personalikeposition);
     } catch (Exception $ex) {
 
@@ -77,26 +77,38 @@ if (isset($_POST['savechanges'])) {
                     <span style="float: left;margin-left: 5px;">Installed</span>
                 </div>
             <?php } else {
- ?>
+            ?>
                 <a target="_blank" href="<?php echo ACCESS_URL . "socialaccount"; ?>"><div  style="float: left;width: 60px;margin-left: 10px;color: #62C0E0;text-decoration: underline;cursor: pointer">Enable Twitter</div></a>
+            <?php } ?>
+        </div>
+        <div style="display: inline-block">
+            <img src="<?php echo plugins_url('images/googleIcon.png', dirname(dirname(__FILE__))); ?>" alt="" style="float: left;"/>
+            <?php if ($googleEnable == 'Y') {
+ ?>
+                <div style="float: left;width: 70px;margin: 10px 0 0 10px;">
+                    <img src="<?php echo plugins_url('images/check.png', dirname(dirname(__FILE__))); ?>" alt="" style="float:left"/>
+                    <span style="float: left;margin-left: 5px;">Installed</span>
+                </div>
+<?php } else { ?>
+                <div style="float: left;width: 60px;margin-left: 10px;color: #62C0E0;text-decoration: underline;cursor: pointer">Enable Google</div>
 <?php } ?>
         </div>
-                <div style="display: inline-block">
-                    <img src="<?php echo plugins_url('images/googleIcon.png', dirname(dirname(__FILE__)));  ?>" alt="" style="float: left;"/>
-<?php  if ($googleEnable == 'Y') {      ?>
-                                        <div style="float: left;width: 70px;margin: 10px 0 0 10px;">
-                                            <img src="<?php echo plugins_url('images/check.png', dirname(dirname(__FILE__)));      ?>" alt="" style="float:left"/>
-                                            <span style="float: left;margin-left: 5px;">Installed</span>
-                                        </div>
-<?php  } else {      ?>
-                                        <div style="float: left;width: 60px;margin-left: 10px;color: #62C0E0;text-decoration: underline;cursor: pointer">Enable Google</div>
-<?php  }      ?>
-                                </div>
+        <div style="display: inline-block">
+            <img src="<?php echo plugins_url('images/linkedin.png', dirname(dirname(__FILE__))); ?>" alt="" style="float: left;"/>
+<?php if ($linkedinEnable == 'Y') { ?>
+                <div style="float: left;width: 70px;margin: 10px 0 0 10px;">
+                    <img src="<?php echo plugins_url('images/check.png', dirname(dirname(__FILE__))); ?>" alt="" style="float:left"/>
+                    <span style="float: left;margin-left: 5px;">Installed</span>
+                </div>
+<?php } else { ?>
+                <div style="float: left;width: 60px;margin-left: 10px;color: #62C0E0;text-decoration: underline;cursor: pointer">Enable LinkedIn</div>
+<?php } ?>
         </div>
-        <form action="" method="post">
-            
-            <div class="headerBar">persona OnBoarding</div>
-            <div style="float: left;width: 100%;font: normal 13px Arial;margin: 10px;">
+    </div>
+    <form action="" method="post">
+
+        <div class="headerBar">persona OnBoarding</div>
+        <div style="float: left;width: 100%;font: normal 13px Arial;margin: 10px;">
 <?php if (get_option("_PERSONA_ONBOARDING")) { ?>
                 <div style="margin: 10px 0">
                     <input type="radio" name="personaonboarding" checked="checked" value="1"/>
@@ -185,7 +197,7 @@ if (isset($_POST['savechanges'])) {
         </div>
         <div class="headerBar">Rating position setting</div>
         <div style="margin: 10px 0;width:100%;clear:both">
-           <?php if (get_option("persona_rating_post_position")=="top") { ?>
+<?php if (get_option("persona_rating_post_position") == "top") { ?>
                 <div style="margin: 10px 0">
                     <input type="radio" name="persona_rating_post_position" value="top" checked="checked"/>
                     <span> Top of Content <span style="font-weight: bold;">(Default)</span></span>
@@ -194,15 +206,15 @@ if (isset($_POST['savechanges'])) {
                     <input type="radio" name="persona_rating_post_position" value="bottom"/>
                     <span>  Bottom of Content</span>
                 </div>
-                 <div>
+                <div>
                     <input type="radio" name="persona_rating_post_position" value="both"/>
                     <span>  Both Top and Bottom of content</span>
                 </div>
-               <div>
+                <div>
                     <input type="radio" name="persona_rating_post_position" value="disable"/>
                     <span>  Disable</span>
                 </div>
-         <?php } elseif(get_option("persona_rating_post_position")=="bottom"){ ?>
+<?php } elseif (get_option("persona_rating_post_position") == "bottom") { ?>
                 <div style="margin: 10px 0">
                     <input type="radio" name="persona_rating_post_position" value="top"/>
                     <span>  Top of Content  <span style="font-weight: bold;">(Default)</span></span>
@@ -220,8 +232,8 @@ if (isset($_POST['savechanges'])) {
                     <span>  Disable</span>
                 </div>
 
-            <?php }elseif(get_option("persona_rating_post_position")=="both"){ ?>
-                  <div style="margin: 10px 0">
+<?php } elseif (get_option("persona_rating_post_position") == "both") { ?>
+                <div style="margin: 10px 0">
                     <input type="radio" name="persona_rating_post_position" value="top"/>
                     <span>  Top of Content  <span style="font-weight: bold;">(Default)</span></span>
                 </div>
@@ -229,7 +241,7 @@ if (isset($_POST['savechanges'])) {
                     <input type="radio" name="persona_rating_post_position" value="bottom"/>
                     <span>  Bottom of Content</span>
                 </div>
-                 <div>
+                <div>
                     <input type="radio" name="persona_rating_post_position" value="both" checked="checked"/>
                     <span>  Both Top and Bottom of content</span>
                 </div>
@@ -237,7 +249,7 @@ if (isset($_POST['savechanges'])) {
                     <input type="radio" name="persona_rating_post_position" value="disable" />
                     <span>  Disable</span>
                 </div>
-                <?php }else { ?>
+<?php } else { ?>
                 <div style="margin: 10px 0">
                     <input type="radio" name="persona_rating_post_position" value="top"/>
                     <span>  Top of Content  <span style="font-weight: bold;">(Default)</span></span>
@@ -258,7 +270,7 @@ if (isset($_POST['savechanges'])) {
         </div>
         <div class="headerBar">Like/Dislike position setting</div>
         <div style="margin: 10px 0;width:100%;clear:both">
-           <?php if (get_option("persona_like_post_position")=="top") { ?>
+<?php if (get_option("persona_like_post_position") == "top") { ?>
                 <div style="margin: 10px 0">
                     <input type="radio" name="persona_like_post_position" value="top" checked="checked"/>
                     <span> Top of Content <span style="font-weight: bold;">(Default)</span></span>
@@ -271,12 +283,12 @@ if (isset($_POST['savechanges'])) {
                     <input type="radio" name="persona_like_post_position" value="both"/>
                     <span>  Both Top and Bottom of content</span>
                 </div>
-               <div>
+                <div>
                     <input type="radio" name="persona_like_post_position" value="disable"/>
                     <span>  Disable</span>
                 </div>
-          <?php }elseif(get_option("persona_like_post_position")=="bottom"){  ?>
-             <div style="margin: 10px 0">
+<?php } elseif (get_option("persona_like_post_position") == "bottom") { ?>
+                <div style="margin: 10px 0">
                     <input type="radio" name="persona_like_post_position" value="top"/>
                     <span>  Top of Content <span style="font-weight: bold;">(Default)</span></span>
                 </div>
@@ -288,13 +300,13 @@ if (isset($_POST['savechanges'])) {
                     <input type="radio" name="persona_like_post_position" value="both"/>
                     <span>  Both Top and Bottom of content</span>
                 </div>
-                 <div>
+                <div>
                     <input type="radio" name="persona_like_post_position" value="disable"/>
                     <span>  Disable</span>
                 </div>
 
-    <?php } elseif(get_option("persona_like_post_position")=="both"){?>
-<div style="margin: 10px 0">
+<?php } elseif (get_option("persona_like_post_position") == "both") { ?>
+                <div style="margin: 10px 0">
                     <input type="radio" name="persona_like_post_position" value="top"/>
                     <span>  Top of Content <span style="font-weight: bold;">(Default)</span></span>
                 </div>
@@ -306,11 +318,11 @@ if (isset($_POST['savechanges'])) {
                     <input type="radio" name="persona_like_post_position" value="both" checked="checked"/>
                     <span>  Both Top and Bottom of content</span>
                 </div>
-                 <div>
+                <div>
                     <input type="radio" name="persona_like_post_position" value="disable" />
                     <span>  Disable</span>
                 </div>
- <?php }else { ?>
+<?php } else { ?>
                 <div style="margin: 10px 0">
                     <input type="radio" name="persona_like_post_position" value="top"/>
                     <span>  Top of Content <span style="font-weight: bold;">(Default)</span></span>
@@ -319,7 +331,7 @@ if (isset($_POST['savechanges'])) {
                     <input type="radio" name="persona_like_post_position" value="bottom" />
                     <span>  Bottom of Content</span>
                 </div>
-                  <div>
+                <div>
                     <input type="radio" name="persona_like_post_position" value="both"/>
                     <span>  Both Top and Bottom of content</span>
                 </div>
@@ -327,7 +339,7 @@ if (isset($_POST['savechanges'])) {
                     <input type="radio" name="persona_like_post_position" value="disable" checked="checked"/>
                     <span>  Disable</span>
                 </div>
-     <?php } ?>
+<?php } ?>
         </div>
 
         <div style="width:100%;clear:both;margin-top:20px ">
