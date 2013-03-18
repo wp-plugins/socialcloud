@@ -16,6 +16,7 @@ if (isset($_POST['betaoutSubmit'])) {
              $facebookEnable=isset($curlResponse['facebookConnected'])?$curlResponse['facebookConnected']:"N";
              $twitterEnable=isset($curlResponse['twitterConnected'])?$curlResponse['twitterConnected']:"N";
              $googleEnable=isset($curlResponse['googleConnected'])?$curlResponse['googleConnected']:"N";
+             $linkedinEnable=isset($curlResponse['linkedinConnected'])?$curlResponse['linkedinConnected']:"N";
             require_once('configuredSuccess.php');
             return;
         }
