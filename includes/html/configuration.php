@@ -74,7 +74,7 @@ if (isset($_POST['betaoutSubmit'])) {
                     <input type="hidden" name="wordpressVersion" id="wordpressVersion" value="<?php echo get_bloginfo('version'); ?>"/>
                     <input type="hidden" name="betaoutSubmit" value="submit"/>
                     <div style="float: right">
-                        <a href="http://access.betaout.com/admin-signup/nv/packageId/1" target="_blank">Get Your Free Key</a>
+                        <a href="http://access.betaout.com/persona/sign-up" target="_blank">Get Your Free Key</a>
                         <button type="button" onclick="javascript:submit();" class="buttonStyle">Save Key</button>
                     </div>
                 </div>
