@@ -1,5 +1,5 @@
-=== Plugin Name ===
-Contributors: SocialCloud
+=== SocialCloud ===
+Contributors:Betaout
 Tags: social, single sign on, gamification, sharing, socialcloud, subscribers, viewers, social, activity, social analytics, amplify,  persona, multiple sites, network, comment system
 Requires at least: 3.1
 Tested up to: 3.5.1
