@@ -40,7 +40,7 @@ class persona_plugin {
                 $betaoutApiKey = get_option("_PERSONA_API_KEY");
                 $betaoutApiSecret = get_option("_PERSONA_API_SECRET");
                 $wordpressVersion = get_bloginfo('version');
-                $wordpressBoPluginUrl = plugins_url() . "/persona";
+                $wordpressBoPluginUrl = plugins_url() . "/socialcloud";
 
 
 
