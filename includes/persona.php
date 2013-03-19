@@ -182,6 +182,7 @@ class persona_plugin {
             $betaoutApiKey = get_option("_PERSONA_API_KEY");
             $betaoutApiSecret = get_option("_PERSONA_API_SECRET");
             $url = 'http://' . get_option("_PERSONA_CLIENT_NAME") . "." . PERSONA_PROFILE_URL;
+            try{
             $IPPHPSDKObj = new PERSONASDK($betaoutApiKey, $betaoutApiSecret, $url);
             $parameters = array("personasessionid" => $_COOKIE['personasessionid']);
             $curlResponse = $IPPHPSDKObj->getProfileSnap($parameters);
@@ -199,7 +200,10 @@ class persona_plugin {
             }
 
             return false;
-        }
+       }catch(Exception $e){
+         return false;
+       }
+       }
     }
 
     function connect() {
