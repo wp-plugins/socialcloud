@@ -26,13 +26,13 @@ If the automatic process above fails, follow these simple steps to do a manual i
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Get your free API key by registering an account at http://www.betaout.com
 
-= Screenshots =
+== Screenshots ==
 
 1. **Amplify Dashboard** - See the users activity in your publications. Sign ups, pageviews, social sharing, comments.
 2. **Manage All you sites** - Have your network single sign on, and get permission only for your own social apps.
 3. **Sign Up Dashboard** - Gamify you viewers experience. They can have their own social network on your publication.
 4. **Campaigns** - Give your viewers tools to engage other viewers, and raise voice collectively.
-5. **User Profile** - Give your users including team members, site subscribers etc a personal dashboard, to monitor their progress, badges, rewards across your network.
+
 
 
 == Frequently Asked Questions ==
