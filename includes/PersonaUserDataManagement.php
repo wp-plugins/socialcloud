@@ -337,7 +337,7 @@ class Persona_UserDataManagement {
             $betaoutApiKey = empty($betaoutApiKey) ? get_option("_PERSONA_API_KEY") : $betaoutApiKey;
             $betaoutApiSecret = empty($betaoutApiSecret) ? get_option("_PERSONA_API_SECRET") : $betaoutApiSecret;
             $wordpressVersion = empty($wordpressVersion) ? get_bloginfo('version') : $wordpressVersion;
-            $wordpressBoPluginUrl = empty($wordpressBoPluginUrl) ? plugins_url() . "/persona" : $wordpressBoPluginUrl;
+            $wordpressBoPluginUrl = empty($wordpressBoPluginUrl) ? plugins_url() . "/socialcloud" : $wordpressBoPluginUrl;
             $parameters = array('wordpressVersion' => $wordpressVersion, 'wordpressBoPluginUrl' => $wordpressBoPluginUrl);
             
 //            self::addCustomUserRoles();
