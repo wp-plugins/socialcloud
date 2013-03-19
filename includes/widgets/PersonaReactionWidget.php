@@ -32,7 +32,7 @@ class PersonaReactionWidget extends WP_Widget {
      * @param array $instance Saved values from database.
      */
      function widget($args, $instance) {
-
+ extract( $args );
 
 
             $title = apply_filters('widget_title', empty($instance['title']) ? '&nbsp;' : $instance['title'], $instance, $this->id_base);

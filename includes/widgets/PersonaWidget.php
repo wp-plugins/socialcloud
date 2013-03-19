@@ -11,7 +11,7 @@ class PersonaWidget extends WP_Widget {
 
     function widget($args, $instance) {
 
-
+   extract( $args );
         if (is_user_logged_in() && !is_admin() && empty($_COOKIE['personasessionid']) && get_option('_PERSONA_LOGIN') == "N") {
             global $user_ID;
             $size = '60';
