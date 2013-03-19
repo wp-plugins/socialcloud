@@ -26,7 +26,7 @@ defined('PERSONA_API_URL')
         || define('PERSONA_API_URL', 'http://'.PERSONA_URL.'/clientapi/');
 
 defined('PERSONA_PROFILE_URL')
-                ||define('PERSONA_PROFILE_URL', 'http://'.PERSONA_URL.'/clientapi/');
+                ||define('PERSONA_PROFILE_URL', PERSONA_URL.'/clientapi/');
 
 
 
