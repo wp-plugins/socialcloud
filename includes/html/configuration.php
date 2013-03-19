@@ -71,7 +71,7 @@ if (isset($_POST['betaoutSubmit'])) {
                     <input type="text" value="<?php if ($showError) echo get_option('_PERSONA_API_SECRET_TEMP', false); else echo get_option('_PERSONA_API_SECRET', false); ?>" id="betaoutApiSecret" name="betaoutApiSecret" class="inputText"/>
                 </div>
                 <div class="control-group">
-                    <input type="hidden" name="wordpressBoPluginUrl" id="wordpressBoPluginUrl" value="<?php echo plugins_url(); ?>/persona"/>
+                    <input type="hidden" name="wordpressBoPluginUrl" id="wordpressBoPluginUrl" value="<?php echo plugins_url(); ?>/socialcloud"/>
                     <input type="hidden" name="wordpressVersion" id="wordpressVersion" value="<?php echo get_bloginfo('version'); ?>"/>
                     <input type="hidden" name="betaoutSubmit" value="submit"/>
                     <div style="float: right">
