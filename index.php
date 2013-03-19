@@ -20,7 +20,7 @@ defined('ACCESS_URL')
         || define('ACCESS_URL', 'http://access.betaout.com/');
 
 defined('PERSONA_URL')
-        || define('PERSONA_URL', 'persoan.to');
+        || define('PERSONA_URL', 'persona.to');
 
 defined('PERSONA_API_URL')
         || define('PERSONA_API_URL', 'http://'.PERSONA_URL.'/clientapi/');
