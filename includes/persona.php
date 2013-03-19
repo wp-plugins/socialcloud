@@ -1,11 +1,11 @@
 <?php
+
 /**
  * Add the Css and Js files to the <head> of WordPress pages
  *
  * @return none
- *adds HTML to the document <head>
+ * adds HTML to the document <head>
  */
-
 class persona_plugin {
 
     function persona_comment_template() {
@@ -75,9 +75,9 @@ class persona_plugin {
         add_menu_page('Persona', 'Persona', 'manage_options', 'persona', 'persona_plugin::persona', plugins_url('images/icon.png', dirname(__FILE__)));
     }
 
-     function persona_login_form() {
-      
-        if (is_user_logged_in()) {
+    function persona_login_form() {
+
+        if (is_user_logged_in ()) {
             return true;
         }
 
@@ -94,7 +94,6 @@ class persona_plugin {
                    </p>';
     }
 
-   
     public function personalogout() {
         do_action('clear_auth_cookie');
 
@@ -175,30 +174,33 @@ class persona_plugin {
         setcookie(PASS_COOKIE, ' ', time() - 31536000, SITECOOKIEPATH, COOKIE_DOMAIN);
     }
 
-
     public function persona_get_data() {
 
-       if ($_COOKIE['personasessionid']) {
+        if ($_COOKIE['personasessionid']) {
             $betaoutApiKey = get_option("_PERSONA_API_KEY");
             $betaoutApiSecret = get_option("_PERSONA_API_SECRET");
             $url = 'http://' . get_option("_PERSONA_CLIENT_NAME") . "." . PERSONA_PROFILE_URL;
-            $IPPHPSDKObj = new PERSONASDK($betaoutApiKey, $betaoutApiSecret, $url);
-            $parameters = array("personasessionid" => $_COOKIE['personasessionid']);
-            $curlResponse = $IPPHPSDKObj->getProfileSnap($parameters);
-            $UserProfile = json_decode($curlResponse, true);
-            if (isset($UserProfile['responseCode']) && $UserProfile['responseCode'] == 200) {
+            try {
+                $IPPHPSDKObj = new PERSONASDK($betaoutApiKey, $betaoutApiSecret, $url);
+                $parameters = array("personasessionid" => $_COOKIE['personasessionid']);
+                $curlResponse = $IPPHPSDKObj->getProfileSnap($parameters);
+                $UserProfile = json_decode($curlResponse, true);
+                if (isset($UserProfile['responseCode']) && $UserProfile['responseCode'] == 200) {
 
-                return $UserProfile;
-            } else {
-                if (get_option('_PERSONA_LOGIN') == "Y") {
-                    update_option('_PERSONA_LOGIN', "N");
-                    persona_plugin::clearcookies();
-                    add_filter('show_admin_bar', '__return_false');
+                    return $UserProfile;
+                } else {
+                    if (get_option('_PERSONA_LOGIN') == "Y") {
+                        update_option('_PERSONA_LOGIN', "N");
+                        persona_plugin::clearcookies();
+                        add_filter('show_admin_bar', '__return_false');
+                    }
+                    return false;
                 }
+
+                return false;
+            } catch (Exception $e) {
                 return false;
             }
-
-            return false;
         }
     }
 
@@ -286,7 +288,7 @@ class persona_plugin {
 
 
                     self::set_cookies($wp_user_id);
-                      exit();
+                    exit();
                 } else {
 
                     if (!get_option('users_can_register')) {
@@ -299,6 +301,7 @@ class persona_plugin {
             } // check verification status of the email ends.
         }
     }
+
     // Autantication ends
 
 
@@ -401,7 +404,7 @@ class persona_plugin {
     }
 
     private static function set_cookies($user_id = 0, $remember = true) {
-       if (!function_exists('wp_set_auth_cookie')) {
+        if (!function_exists('wp_set_auth_cookie')) {
 
             return false;
         }
@@ -442,6 +445,4 @@ class persona_plugin {
     }
 
 }
-
-
 
