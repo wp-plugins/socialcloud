@@ -26,7 +26,7 @@ class persona_plugin {
         wp_enqueue_style('commonCss');
         wp_enqueue_script('persona_widget', 'http://persona.to/assets/public/js/personawidgetapi.js', array('jquery'), '', false);
         wp_localize_script('persona_widget', 'personaL10n', array(
-            'plugin_url' => plugins_url('persona'),
+            'plugin_url' => plugins_url('socialcloud'),
             'ajax_url' => admin_url('admin-ajax.php', (is_ssl() ? 'https' : 'http')),
         ));
     }
