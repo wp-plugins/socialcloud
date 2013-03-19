@@ -24,7 +24,7 @@ If the automatic process above fails, follow these simple steps to do a manual i
 
 1. Extract the contents of the zip file into your '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Get your free API key by registering an account at http://www.betaout.com
+3. Get your free API key by registering an account at http://www.access.betaout.com/persona/sign-up
 
 == Screenshots ==
 
