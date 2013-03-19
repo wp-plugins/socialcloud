@@ -23,11 +23,10 @@ The easiest way to install this plugin is to go to Add New in the Plugins sectio
 If the automatic process above fails, follow these simple steps to do a manual install:
 
 1. Extract the contents of the zip file into your '/wp-content/plugins/' directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Get your free API key by registering an account at http://www.betaout.com
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Get your free API key by registering an account at http://www.betaout.com
 
 == Screenshots ==
-
 
 1. **Amplify Dashboard** - See the users activity in your publications. Sign ups, pageviews, social sharing, comments.
 2. **Manage All you sites** - Have your network single sign on, and get permission only for your own social apps.
