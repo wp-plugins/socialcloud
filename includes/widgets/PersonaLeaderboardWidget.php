@@ -33,7 +33,7 @@ class PersonaLeaderboardWidget extends WP_Widget {
      */
      function widget($args, $instance) {
 
-
+ extract( $args );
 
             $title = apply_filters('widget_title', empty($instance['title']) ? '&nbsp;' : $instance['title'], $instance, $this->id_base);
 
