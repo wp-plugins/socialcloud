@@ -27,9 +27,10 @@ If the automatic process above fails, follow these simple steps to do a manual i
 3. Get your free API key by registering an account at http://www.betaout.com
 
 == Screenshots ==
-1. Here's a screenshot of it in action
-
-
+1. **Sign Up Dashboard** - Gamify you viewers experience. They can have their own social network on your publication.
+2. **Manage All you sites** - Have your network single sign on, and get permission only for your own social apps.
+3. **Amplify Dashboard** - See the users activity in your publications. Sign ups, pageviews, social sharing, comments.
+4. **Campaigns** - Give your viewers tools to engage other viewers, and raise voice collectively.
 == Frequently Asked Questions ==
 
 = Where is the User Manual? =
