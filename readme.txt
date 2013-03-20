@@ -27,7 +27,7 @@ If the automatic process above fails, follow these simple steps to do a manual i
 3. Get your free API key by registering an account at http://www.betaout.com
 
 == Screenshots ==
-no screenshot 
+1. Here's a screenshot of it in action
 
 
 == Frequently Asked Questions ==
