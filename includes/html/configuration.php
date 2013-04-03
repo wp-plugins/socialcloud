@@ -85,7 +85,7 @@ if (isset($_POST['betaoutSubmit'])) {
     <div style="float: left;width: 100%;font: normal 13px Arial;color: #333333;margin: 20px;">
         <img src="<?php echo plugins_url('images/bulb.png', dirname(dirname(__FILE__))); ?>" alt="" style="float: left;margin-right: 10px"/>
         <div style="float: left">
-            <span>To be able to use this plugin you first of all need to create a free account at <a href="http://www.betaout.com">http://www.betaout.com</a>  and setup a Site.</span>
+            <span>To be able to use this plugin you first of all need to create a free account at <a href="http://access.betaout.com/persona/sign-up">http://access.betaout.com/persona/sign-up</a>  and setup a Site.</span>
             <br/><span>After having created your account and adding your Site, get your Site API key and Secret.</span>
         </div>
 
