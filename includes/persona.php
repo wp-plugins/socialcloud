@@ -386,7 +386,7 @@ class persona_plugin {
                     update_user_meta($user_id, 'email', $email);
                 }
                 if (!empty($personaid)) {
-                    update_user_meta($user_id, 'personaid', $id);
+                    update_user_meta($user_id, 'personaid', $personaid);
                 }
 
                 if (!empty($thumbnail)) {
